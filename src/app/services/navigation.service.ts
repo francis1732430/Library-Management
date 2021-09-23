@@ -7,4 +7,12 @@ import { Router } from '@angular/router';
 export class NavigationService {
 
   constructor(private router: Router) { }
+
+  goToLandingPage(): void {
+    this.router.navigate(['home']);
+  }
+
+  goToLoginPage(): void {
+    this.router.navigate(['/login']);
+  }
 }

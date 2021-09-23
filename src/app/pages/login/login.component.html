@@ -12,7 +12,10 @@
               </label>
               <div class="Error"
                 *ngIf="loginForm.controls.email.hasError('required') && loginForm.controls.email.touched">Email
-                Required</div>
+                Required.</div>
+              <div class="Error"
+                *ngIf="loginForm.controls.email.hasError('pattern')
+                && loginForm.controls.email.touched">Invalid Email.</div>
             </div>
             <div class="rows">
               <input class="input" type="password" id="password" name="password" formControlName="password"
@@ -23,10 +26,9 @@
                 </span>Password</label>
               <div class="Error"
                 *ngIf="loginForm.controls.password.hasError('required') && loginForm.controls.password.touched">Password
-                Required</div>
+                Required.</div>
             </div>
             <div class="rows" style="margin-top: 30px;margin-left: 80px;">
-              <!-- <img class="btn-img" src="assets/images/Lock.png"> -->
               <a class="login-submit" href="#" (click)="submit($event);$event.preventDefault()">LOGIN</a>
             </div>
             <div class="row" style="margin-top: -16px;">

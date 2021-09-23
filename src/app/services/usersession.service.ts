@@ -10,17 +10,20 @@ export class UsersessionService {
   constructor() {
     this.localStorageSessionKey = 'DemoLibrary-' + environment.apiBaseUrl + '-AuthData';
   }
-  create(session: UserSession) {
-    this.setNewSession(session);
+  create(session: UserSession, key?: any) {
+    this.setNewSession(session, key);
   }
-  setNewSession(session: any) {
-    localStorage.setItem(this.localStorageSessionKey, JSON.stringify(session));
+  setNewSession(session: any, key?: any) {
+    localStorage.setItem(key ? key: this.localStorageSessionKey, JSON.stringify(session));
   }
-  load(): any {
-    const jsonObj = localStorage.getItem(this.localStorageSessionKey) ? JSON.parse(String(localStorage.getItem(this.localStorageSessionKey))) : '';
+  load(key?: any): any {
+    const jsonObj = localStorage.getItem(key ? key : this.localStorageSessionKey) ? JSON.parse(String(localStorage.getItem(key ? key : this.localStorageSessionKey))) : '';
     return jsonObj;
   }
   destroy() {
-    localStorage.setItem(this.localStorageSessionKey, '');
+    localStorage.clear();
+  }
+  removeSession(key?: any) {
+    localStorage.setItem(key ? key : this.localStorageSessionKey, '');
   }
 }

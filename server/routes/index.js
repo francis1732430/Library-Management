@@ -16,6 +16,7 @@ router.post('/login', async (req, res, next) => {
             res.status(400).json({
                 message: "Email or Password is required."
             });
+            return
         }
         if (userDetails && userDetails.password === password) {
             const payload = {
@@ -28,7 +29,8 @@ router.post('/login', async (req, res, next) => {
         
             res.json({
                 message: "Token created successfully",
-                token
+                token,
+                userDetails
             });
         } else {
             res.status(400).json({

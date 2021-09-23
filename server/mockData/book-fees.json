@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "fee_amount": 20,
+        "due_date": 3,
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    },
+    {
+        "id": 2,
+        "fee_amount": 50,
+        "due_date": 7,
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    }
+]

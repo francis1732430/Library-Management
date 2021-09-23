@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Module
 import { AppRoutingModule } from './app-routing.module';
 
 // Services
-import { AuthenticationService, NavigationService } from './services/index';
+import { AuthenticationService, NavigationService, AlertService, authInterceptorProviders } from './services/index';
 
 // Component
 import { AppComponent } from './app.component';
@@ -21,11 +23,19 @@ import { LayoutComponent } from './pages/layout/layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }),
+    BrowserAnimationsModule
   ],
   providers: [
     AuthenticationService,
-    NavigationService
+    NavigationService,
+    AlertService,
+    authInterceptorProviders
   ],
   bootstrap: [AppComponent]
 })

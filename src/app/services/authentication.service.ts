@@ -20,8 +20,7 @@ export class AuthenticationService {
     return this.http.post<any>(this.baseUrl + 'login', body);
   }
   isAuthenticated(): boolean {
-    const keys = this.sessionService.load();
-    console.log(keys);
+    const keys = this.sessionService.load('userprofile');
     if (keys && keys.id) {
       return true;
     }

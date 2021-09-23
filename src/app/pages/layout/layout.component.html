@@ -1,6 +1,19 @@
 <div class="nav-head">
     <div class="nav-head-title">
-        Demo Library
+        Library Management
+    </div>
+    <div class="nav-head-profile" *ngIf="isAuthenticated">
+        <div class="profile-img">
+            <img [src]="userProfile.profile_url ? userProfile.profile_url : 'assets/images/profile.png'" alt="user">
+            <div>
+                <label>
+                    {{ userProfile.user_name }}
+                </label>
+            </div>
+        </div>
+        <div class="logout">
+            <a [routerLink]="" (click)="logout()">Logout</a>
+        </div>
     </div>
   </div>
   <div class="layout-content">
