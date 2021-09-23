@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "book_title": "Absalom, Absalom!",
+        "author": "William Faulkner",
+        "category": "Novel",
+        "book_status": "AVAILABLE",
+        "book_url": "assets/img/book1.jpg",
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    },
+    {
+        "id": 2,
+        "book_title": "After Many a Summer Dies the Swan",
+        "author": "Aldous Huxley",
+        "category": "Novel",
+        "book_status": "AVAILABLE",
+        "book_url": "assets/img/book2.jpg",
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    },
+    {
+        "id": 3,
+        "book_title": "Ah, Wilderness!",
+        "author": "Eugene O'Neill",
+        "category": "Novel",
+        "book_status": "AVAILABLE",
+        "book_url": "assets/img/book3.jpg",
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    },
+    {
+        "id": 4,
+        "book_title": "All Passion Spent",
+        "author": "Vita Sackville-West",
+        "category": "Novel",
+        "book_status": "BORROWED",
+        "book_url": "assets/img/book4.jpg",
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    },
+    {
+        "id": 5,
+        "book_title": "An Acceptable Time",
+        "author": "Madeleine L'Engle",
+        "category": "Novel",
+        "book_status": "OVERDUE",
+        "book_url": "assets/img/book5.jpg",
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "role_name": "Librarian",
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    },
+    {
+        "id": 2,
+        "role_name": "User",
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    }
+]

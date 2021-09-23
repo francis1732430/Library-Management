@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "user_id": 2,
+        "user_name": "salin",
+        "book_id": 4,
+        "book_name": "All Passion Spent",
+        "borrowed_date": "2021-09-28T09:19:58.260Z",
+        "return_date": "2021-10-02T09:19:58.260Z",
+        "fee_charge": "0",
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    },
+    {
+        "id": 1,
+        "user_id": 3,
+        "user_name": "vinoth",
+        "book_id": 5,
+        "book_name": "An Acceptable Time",
+        "borrowed_date": "2021-08-14T09:19:58.260Z",
+        "return_date": "2021-09-02T09:19:58.260Z",
+        "fee_charge": "0",
+        "createdAt": "2021-09-22T09:19:58.260Z",
+        "updatedAt": "2021-09-22T09:19:58.260Z",
+        "is_active": 1
+    }
+]

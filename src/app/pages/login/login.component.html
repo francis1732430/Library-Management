@@ -1,0 +1,41 @@
+<div class="login-pg">
+        <div class="box">
+          <form [formGroup]="loginForm">
+            <div class="rows">
+              <input class="input" type="email" id="email" name="email" formControlName="email" autocomplete="off"
+                (keyup.enter)="submit($event)" required>
+              <label for="email" class="usernamelabel">
+                <span class="u-span">
+                    <img src="assets/images/user.png" alt="">
+                </span>
+                Email
+              </label>
+              <div class="Error"
+                *ngIf="loginForm.controls.email.hasError('required') && loginForm.controls.email.touched">Email
+                Required</div>
+            </div>
+            <div class="rows">
+              <input class="input" type="password" id="password" name="password" formControlName="password"
+                autocomplete="off" (keyup.enter)="submit($event)" required>
+  
+              <label for="password" class="passwordlabel"><span class="p-span">
+                  <img src="assets/images/key.png" alt="">
+                </span>Password</label>
+              <div class="Error"
+                *ngIf="loginForm.controls.password.hasError('required') && loginForm.controls.password.touched">Password
+                Required</div>
+            </div>
+            <div class="rows" style="margin-top: 30px;margin-left: 80px;">
+              <!-- <img class="btn-img" src="assets/images/Lock.png"> -->
+              <a class="login-submit" href="#" (click)="submit($event);$event.preventDefault()">LOGIN</a>
+            </div>
+            <div class="row" style="margin-top: -16px;">
+              <div class="col-lg-6 col-md-5 col-sm-7" style="margin-left: 3px;">
+                <label class="form-check-label remember">
+                  <input type="checkbox" name="c4" id="c4"><label for="c4"></label><span>Remember me</span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>

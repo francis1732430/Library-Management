@@ -1,0 +1,598 @@
+.login-pg {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    margin-top: 120px;
+    width: 425px;
+    height: 330px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: rgb(0 0 0 / 74%);
+    margin-left: 147px;
+    border-radius: 10px;
+    border-top: 1.4px solid rgba(218, 207, 207, 0.33);
+    border-bottom: 2px solid rgba(218, 207, 207, 0.33);
+    border-left: 2px solid rgba(218, 207, 207, 0.33);
+    border-right: 2px solid rgba(218, 207, 207, 0.33);
+}
+.input {
+    width: 340px;
+    height: 35px;
+    border:none;
+    outline:none;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(218, 207, 207, 0.33);
+    color:#dacfcf;
+}
+
+input[type="text"]:focus,input[type="password"]:focus {
+    border-bottom: 1px solid rgba(218, 207, 207, 0.33);
+    color: #dacfcf;
+}
+
+.usernamelabel, .passwordlabel {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: -337px;
+    font-size: 13pt;
+    display: inline-block;
+    padding: 2px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+    color: #a8a8a7;
+    font-family: Arial;
+}
+.rows {
+    margin-bottom: 14px;
+    height: 60px;
+    margin-top: 8px;
+}
+.fa-submit {
+    margin-left: 22px;
+    position: absolute;
+    text-align: center;
+    color: #dacfcf;
+    margin-top: 2px;
+}
+.login-submit {
+    padding: 9px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #860e17;
+    border-radius: 35px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 69px;
+    padding-right: 53px;
+    font-family: Arial;
+    font-size: 13pt;
+    transition: background 0.8s;
+}
+.login-submit:hover {
+    background: #9e121d radial-gradient(circle, transparent 1%, #9e121d 1%) center/15000%;
+  }
+  .login-submit:active {
+    background-color: #4e171b;
+    background-size: 100%;
+    transition: background 0s;
+  }
+.remember {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+}
+.forget-password {
+    text-align: center;
+    text-decoration: none;
+    color: #969696;
+    font-size: 9pt;
+    font-family: Arial;
+    font-style: Italic;
+
+}
+.inputspan {
+    margin-top:-10px;
+    position: absolute;
+    margin-left: 7px;
+    font-size: 18px;
+    display: inline-block;
+    padding: 2px;
+}
+.fa {
+   color: #dacfcf;
+}
+.side-heading {
+    color: #ffffff;
+    font-size: 33pt;
+    margin-top: 250px;
+    line-height: 50px;
+    margin-left: 175px;
+    font-family: Arial;
+}
+.Error {
+    color: red;
+    font-size: 12px;
+    margin-left: 12px;
+    margin-top: 5px;
+}
+.input:focus + .usernamelabel, .input:valid + .usernamelabel, .input:focus + .passwordlabel, .input:valid + .passwordlabel {
+    margin-top:-17px;
+    font-size: 12px;
+    img {
+        width: 18px;
+    }
+}
+
+.logo {
+    margin-left: 2px;
+}
+.usernamelabel img {
+    width: 22px;
+}
+.mail-block {
+    color: white;
+    float: right;
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 115px;
+}
+.mail-icon {
+    margin: 10px;
+}
+footer {
+    font-size: 11pt;
+    bottom: 40px;
+    left: 500px;
+    position: absolute;
+    display: none;
+    font-family: Arial;
+    color: #969696;
+}
+.f-ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 34px;
+    margin-top: -10px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+}
+.f-list {
+    margin-right: 10px;
+    border-right: 2px solid rgba(218, 207, 207, 0.33);
+    padding-right: 10px;
+}
+.u-span {
+    margin-right: 7px;
+}
+.p-span {
+    margin-right: 9px;
+}
+.input:focus + .fa-user, .input:valid + .fa-user {
+    font-size: 12px;
+}
+.side-headingshow {
+    display: none;
+}
+.passwordlabel img{
+    width: 22px;
+}
+.btn-img {
+    width: 20px;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: -1px;
+    cursor: pointer;
+}
+input[type="checkbox"] + label:before {
+    border: 1px solid white;
+    content: "\00a0";
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 18px;
+    padding: 0;
+    vertical-align: top;
+    width: 18px;
+    border-radius: 4px;
+    box-shadow: 0px 0.5px 0px grey;
+     background: white;
+}
+  input[type="checkbox"]:checked + label:before {
+    color: rgba(44, 40, 40, .6);
+    content: "\f00c";
+    text-align: center;
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 600;
+    font-size: 16px;
+  }
+  input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+  }
+  #c4 {
+      width: 0px;
+      height: 0px;
+      visibility: hidden;
+  }
+  .form-check-label span{
+    margin-left: 10px;
+    font-size: 10pt;
+    font-family: Arial;
+    color: #969696;
+    font-style: Italic
+  }
+
+.footer {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: calc(100vh - 50px);
+    display: none;
+}
+.footer .row-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: -7px;
+    flex-direction: row;
+}
+.footer .row-b > div {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.footer .row-b  span {
+    width: 2px;
+    height: 15px;
+    background: rgba(218, 207, 207, 0.33);;
+    display: block;
+}
+
+
+  input:-webkit-autofill:first-line {
+    color: white;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border-bottom: 1px solid rgba(218, 207, 207, 0.33);
+  -webkit-text-fill-color: inherit !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(23, 21, 20, .01) inset;
+  transition: background-color 5000s ease-in-out 0s;
+  padding: 0px 10px;
+}
+input:-webkit-autofill + .usernamelabel,
+input:-webkit-autofill:hover + .usernamelabel, 
+input:-webkit-autofill:focus + .usernamelabel
+input:-webkit-autofill + .usernamelabel {
+margin-top:-15px;
+font-size: 12px;
+img {
+width: 18px;
+}
+}
+input:-webkit-autofill + .passwordlabel,
+input:-webkit-autofill:hover + .passwordlabel, 
+input:-webkit-autofill:focus + .passwordlabel
+input:-webkit-autofill + .passwordlabel {
+margin-top:-15px;
+font-size: 12px;
+img {
+width: 18px;
+}
+}
+@media only screen and (min-height: 580px) and  (min-width: 998px) {
+    .footer {
+        display: flex;
+    }
+}
+@media only screen and (min-height: 760px) and (max-width: 998px) {
+    .footer {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .side-heading1 {
+        display:none;
+    }
+    .box {
+        margin-left: 210px;
+    }
+    .userfloating {
+        width: 120px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 998px){
+    .side-heading1 {
+        display:none;
+    }
+    .box {
+        margin-left: 210px;
+    }
+    .userfloating {
+        width: 120px;
+    }
+    footer {
+        left: 200px;
+    }
+    .side-headingshow {
+        display: block;
+    }
+    .side-heading {
+        color: white;
+        margin-left: 272px;
+        font-size: 30px;
+        margin-top: 112px;
+        width: 265px;
+        line-height: 37px;
+    }
+}
+@media only screen and (min-width: 998px) and (max-width: 1300px) {
+    .row {
+        margin-top: 75px;
+    }
+}
+  @media only screen and (min-width: 1024px) and (max-width: 1200px){
+    .side-heading {
+        font-size: 24pt;
+        line-height: 43px;
+        margin-top: 250px;
+        line-height: 50px;
+        margin-left: 40px;
+}
+.footer {
+    top: calc(100vh - 72px);
+    font-size: 14pt;
+}
+.forget-password {
+    font-size: 9.5px;
+}
+  }
+  @media only screen and (min-width: 1800px) and (min-height: 1000px) and (max-height: 1080px) {
+    .side-heading {
+            color: #ffffff;
+            font-size: 48pt;
+            margin-top: 350px;
+            line-height: 71px;
+            margin-left: 175px;
+            font-family: Arial;
+}
+.box {
+    margin-top: 280px;
+    width: 500px;
+    height: 422px;
+}
+.rows {
+    margin-bottom: 26px;
+    height: 60px;
+    margin-top: 25px;
+}
+.usernamelabel, .passwordlabel {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: -420px;
+    font-size: 14pt;
+}
+input:-webkit-autofill + .usernamelabel, input:-webkit-autofill:hover + .usernamelabel, input:-webkit-autofill:focus + .usernamelabel input:-webkit-autofill + .usernamelabel {
+    margin-top: -19px;
+    font-size: 20px;
+}
+input:-webkit-autofill + .passwordlabel, input:-webkit-autofill:hover + .passwordlabel, input:-webkit-autofill:focus + .passwordlabel input:-webkit-autofill + .passwordlabel {
+    margin-top: -19px;
+    font-size: 20px;
+}
+.login-submit {
+    padding: 9px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    padding-left: 100px;
+    padding-right: 85px;
+    font-size: 15pt;
+}
+.btn-img {
+    width: 24px;
+    position: absolute;
+    margin-left: 45px;
+    margin-top: -1px;
+}
+.form-check-label span {
+    font-size: 15pt;
+}
+.forget-password {
+    font-size: 15pt;
+}
+.footer {
+    font-size: 16pt;
+    top: calc(100vh - 91px);
+}
+.input {
+    width: 415px;
+}
+.forget-password {
+    font-size: 15pt;
+}
+  }
+  @media only screen and (min-width: 1200px) and (max-width: 1300px) and (min-height: 1000px) and (max-height: 1024px) {
+    .side-heading {
+        margin-top: 350px;
+        margin-left: 110px;
+        margin-top: 350px;
+        line-height: 60px;
+    }
+    .box {
+        margin-top: 240px;
+    }
+    .form-check-label span {
+        font-size: 12pt;
+    }
+    .forget-password {
+        font-size: 12pt;
+    }
+    .footer {
+    top: calc(100vh - 70px);
+    font-size: 14pt;
+    }
+  }
+  @media only screen and (min-width: 1325px) and (max-width: 1450px) and (min-height: 875px) and (max-height: 925px) {
+      .side-heading {
+        margin-top: 340px;
+      }
+      .box {
+        margin-top: 230px;
+        width: 450px;
+      }
+      .input {
+        width: 370px;
+    }
+    .usernamelabel, .passwordlabel {
+        margin-left: -360px;
+        font-size: 13pt;
+    }
+    .login-submit {
+        padding-top: 12px;
+        padding-bottom: 8px;
+        padding-left: 85px;
+        padding-right: 73px;
+    }
+    .form-check-label span {
+        font-size: 12.5pt;
+    }
+    .forget-password {
+        font-size: 12.5pt;
+    }
+    .footer {
+        top: calc(100vh - 70px);
+        font-size: 14pt;
+        }
+  }
+  @media only screen and (min-width: 1500px) and (max-width: 1625px) and (min-height: 875px) and (max-height: 925px) {
+    .side-heading {
+        font-size: 40pt;
+        margin-top: 300px;
+        line-height: 54px;
+        margin-left: 155px;
+    }
+    .box {
+        margin-top: 230px;
+        width: 455px;
+    }
+    .input {
+        width: 370px;
+    }
+    input:-webkit-autofill + .usernamelabel, input:-webkit-autofill:hover + .usernamelabel, input:-webkit-autofill:focus + .usernamelabel input:-webkit-autofill + .usernamelabel {
+        font-size: 14px;
+        margin-top: -18px;
+    }
+    input:-webkit-autofill + .passwordlabel, input:-webkit-autofill:hover + .passwordlabel, input:-webkit-autofill:focus + .passwordlabel input:-webkit-autofill + .passwordlabel {
+        margin-top: -18px;
+        font-size: 14px;
+    }
+    .login-submit {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 98px;
+        padding-right: 78px;
+        font-size: 14pt;
+    }
+    .btn-img {
+        width: 23px;
+        position: absolute;
+        margin-left: 55px;
+    }
+    .form-check-label span {
+        font-size: 13pt;
+    }
+    .forget-password {
+        font-size: 13pt;
+    }
+    .footer {
+    top: calc(100vh - 70px);
+    font-size: 20px;
+    }
+    .usernamelabel, .passwordlabel {
+        margin-left: -361px;
+    }
+  }
+  @media only screen and (min-width: 1550px) and (max-width: 1720px) and (min-height: 1030px ) and (max-height: 1075px) {
+    .side-heading {
+            color: #ffffff;
+            font-size: 45pt;
+            margin-top: 350px;
+            line-height: 71px;
+            margin-left: 175px;
+            font-family: Arial;
+}
+.box {
+    margin-top: 268px;
+    width: 500px;
+    height: 422px;
+}
+.rows {
+    margin-bottom: 26px;
+    height: 60px;
+    margin-top: 25px;
+}
+.usernamelabel, .passwordlabel {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: -420px;
+    font-size: 14pt;
+}
+input:-webkit-autofill + .usernamelabel, input:-webkit-autofill:hover + .usernamelabel, input:-webkit-autofill:focus + .usernamelabel input:-webkit-autofill + .usernamelabel {
+    margin-top: -19px;
+    font-size: 20px;
+}
+input:-webkit-autofill + .passwordlabel, input:-webkit-autofill:hover + .passwordlabel, input:-webkit-autofill:focus + .passwordlabel input:-webkit-autofill + .passwordlabel {
+    margin-top: -19px;
+    font-size: 20px;
+}
+.login-submit {
+    padding: 9px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    padding-left: 100px;
+    padding-right: 85px;
+    font-size: 15pt;
+}
+.btn-img {
+    width: 24px;
+    position: absolute;
+    margin-left: 45px;
+    margin-top: -1px;
+}
+.form-check-label span {
+    font-size: 15pt;
+}
+.forget-password {
+    font-size: 15pt;
+}
+.footer {
+    font-size: 16pt;
+    top: calc(100vh - 91px);
+}
+.input {
+    width: 415px;
+}
+.forget-password {
+    font-size: 15pt;
+}
+  }
+
+  img {
+    filter: opacity(0.5);
+  }
