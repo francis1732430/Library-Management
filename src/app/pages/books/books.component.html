@@ -1,0 +1,58 @@
+<div class="books-pg">
+    <div class="book-search">
+        <div class="wrap">
+            <div class="search">
+               <input type="text" class="searchTerm" [(ngModel)]="searchText" placeholder="Search books...">
+               <button type="submit" class="searchButton" (click)="getAllBookList()">
+                 <i class="fa fa-search"></i>
+              </button>
+            </div>
+         </div>
+    </div>
+    <div class="books-container">
+        <div class="book-item" *ngFor="let book of booksList">
+            <div class="book-img">
+                <img [src]="book.book_url" alt="book">
+            </div>
+            <div class="book-name">
+                <label>{{ book.book_title }}</label>
+            </div>
+            <div class="book-info">
+                <label>
+                 Author: {{ book.author }}   
+                </label>
+            </div>
+            <div class="book-info">
+                <label>
+                    Category: {{ book.category }}
+                </label>
+            </div>
+            <div class="book-info">
+                <label>
+                    Status: {{ book.book_status }}
+                </label>
+            </div>
+            <div class="book-info">
+                <label>
+                    Rack: {{ book.rack_number}}
+                </label>
+            </div>
+            <ng-container *ngIf="book.booksBorrows">
+            <div class="book-info">
+                <label>
+                    Borrowed Date: {{ book?.booksBorrows?.borrowed_date | date:'mediumDate'}}
+                </label>
+            </div><div class="book-info">
+                <label>
+                    Return Date: {{ book?.booksBorrows?.return_date | date:'mediumDate'}}
+                </label>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="book.book_status === 'AVAILABLE'">
+                <div class="book-available-btn">
+                    <button>Add Book</button>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

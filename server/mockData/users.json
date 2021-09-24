@@ -1,6 +1,6 @@
 [{
     "id": 1,
-    "user_name": "francis",
+    "user_name": "Francis",
     "password": "Francis12345@",
     "email": "francisfrancis@yopmail.com",
     "mobile_number": "8121212112",
@@ -14,7 +14,7 @@
 },
 {
     "id": 2,
-    "user_name": "salin",
+    "user_name": "Salin",
     "password": "Salin12345@",
     "email": "salinsalin@yopmail.com",
     "mobile_number": "8121212113",
@@ -28,7 +28,7 @@
 },
 {
     "id": 3,
-    "user_name": "vinoth",
+    "user_name": "Vinoth",
     "password": "Vinoth12345@",
     "email": "vinothvinoth@yopmail.com",
     "mobile_number": "8121212114",

@@ -1,11 +1,29 @@
 <div class="landing-page">
     <div class="sidebar">
-
+        <div class="books-management p-20">
+            <a routerLink="books">
+                Books Management
+            </a>
+        </div>
+        <div class="books-management p-20">
+            <a routerLink="books-borrowed" [queryParams]="{ bookStatus: 'BORROWED'}">
+                Borrowed Books
+            </a>
+        </div>
+        <div class="books-management p-20">
+            <a routerLink="books-available" [queryParams]="{ bookStatus: 'AVAILABLE'}">
+                Available Books
+            </a>
+        </div>
+        <div class="books-management p-20">
+            <a routerLink="books-overdue" [queryParams]="{ bookStatus: 'OVERDUE'}">
+                OverDue Books
+            </a>
+        </div>
     </div>
 
     <div class="landing-page-content">
         <router-outlet>
-            
         </router-outlet>
     </div>
 </div>

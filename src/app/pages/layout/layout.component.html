@@ -11,6 +11,9 @@
                 </label>
             </div>
         </div>
+        <div class="my-books">
+            <a routerLink="home/my-books" [queryParams]="{ id: userProfile.id}">My Books</a>
+        </div>
         <div class="logout">
             <a [routerLink]="" (click)="logout()">Logout</a>
         </div>

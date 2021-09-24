@@ -5,3 +5,4 @@ export { AlertService } from './alert.service';
 export { InterceptorService, authInterceptorProviders } from './interceptor.service';
 export { AuthGuardService } from './auth-guard.service';
 export { UtilityService } from './utility.service';
+export { DataService } from './data.service';

@@ -1,6 +1,7 @@
 var jsonServer  = require('json-server');
 const jwt = require('jsonwebtoken');
 const userRouter = require('./user.route');
+const bookRouter = require('./book.route');
 const userData = require("../mockData/users.json");
 
 const router = jsonServer.create();
@@ -44,5 +45,5 @@ router.post('/login', async (req, res, next) => {
 });
 
 router.use('/user', userRouter);
-
+router.use('/book', bookRouter)
 module.exports = router;

@@ -14,9 +14,29 @@ const routes: Routes = [
     children: [
       {
         path: 'books',
-        component: LandingPageComponent,
+        loadChildren: () => import('../books/books.module').then((m) => m.BooksModule),
         canActivate: [AuthGuardService],
-      }
+      },
+      {
+        path: 'my-books',
+        loadChildren: () => import('../books/books.module').then((m) => m.BooksModule),
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'books-borrowed',
+        loadChildren: () => import('../borrow-books/borrow-books.module').then((m) => m.BorrowBooksModule),
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'books-available',
+        loadChildren: () => import('../borrow-books/borrow-books.module').then((m) => m.BorrowBooksModule),
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'books-overdue',
+        loadChildren: () => import('../borrow-books/borrow-books.module').then((m) => m.BorrowBooksModule),
+        canActivate: [AuthGuardService],
+      },
     ]
   }
 ];

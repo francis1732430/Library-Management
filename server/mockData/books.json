@@ -6,7 +6,7 @@
         "category": "Novel",
         "book_status": "AVAILABLE",
         "rack_number": "1A",
-        "book_url": "assets/img/book1.jpg",
+        "book_url": "assets/images/absalom-absalom.jpg",
         "createdAt": "2021-09-22T09:19:58.260Z",
         "updatedAt": "2021-09-22T09:19:58.260Z",
         "is_active": 1
@@ -18,7 +18,7 @@
         "category": "Novel",
         "book_status": "AVAILABLE",
         "rack_number": "2C",
-        "book_url": "assets/img/book2.jpg",
+        "book_url": "assets/images/after-many-year.jpg",
         "createdAt": "2021-09-22T09:19:58.260Z",
         "updatedAt": "2021-09-22T09:19:58.260Z",
         "is_active": 1
@@ -30,7 +30,7 @@
         "category": "Novel",
         "book_status": "AVAILABLE",
         "rack_number": "3B",
-        "book_url": "assets/img/book3.jpg",
+        "book_url": "assets/images/Ah-Wilderness-FE.jpg",
         "createdAt": "2021-09-22T09:19:58.260Z",
         "updatedAt": "2021-09-22T09:19:58.260Z",
         "is_active": 1
@@ -42,7 +42,7 @@
         "category": "Novel",
         "book_status": "BORROWED",
         "rack_number": "1A",
-        "book_url": "assets/img/book4.jpg",
+        "book_url": "assets/images/AllPassionSpent.jpg",
         "createdAt": "2021-09-22T09:19:58.260Z",
         "updatedAt": "2021-09-22T09:19:58.260Z",
         "is_active": 1
@@ -54,7 +54,7 @@
         "category": "Novel",
         "book_status": "OVERDUE",
         "rack_number": "2A",
-        "book_url": "assets/img/book5.jpg",
+        "book_url": "assets/images/Acceptabletime.jpg",
         "createdAt": "2021-09-22T09:19:58.260Z",
         "updatedAt": "2021-09-22T09:19:58.260Z",
         "is_active": 1

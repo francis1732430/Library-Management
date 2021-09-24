@@ -1,2 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~ngx-toastr/toastr";
+
+.landing-page {
+    width: 100%;
+    height: calc(100% - 55px);
+    position: relative;
+    top: 55px;
+    display: flex;
+    flex: 1;
+}
+
+.landing-page .sidebar {
+    width: 18%;
+    background: #f2f1f3;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.landing-page .landing-page-content {
+    width: 82%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 40px 25px;
+}
+
+.p-20 {
+    padding: 20px;
+}

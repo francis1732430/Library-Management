@@ -9,7 +9,7 @@ export class NavigationService {
   constructor(private router: Router) { }
 
   goToLandingPage(): void {
-    this.router.navigate(['home']);
+    this.router.navigate(['home/books']);
   }
 
   goToLoginPage(): void {
