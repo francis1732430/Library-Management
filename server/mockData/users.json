@@ -7,7 +7,6 @@
     "address": "4/w,city",
     "profile_url": "assets/images/francis.png",
     "role_id": 1,
-    "user_borrowed_books": 0,
     "createdAt": "2021-09-22T09:19:58.260Z",
     "updatedAt": "2021-09-22T09:19:58.260Z",
     "is_active": 1
@@ -21,7 +20,6 @@
     "address": "4/w,city",
     "profile_url": "assets/images/francis.png",
     "role_id": 2,
-    "user_borrowed_books": 1,
     "createdAt": "2021-09-22T09:19:58.260Z",
     "updatedAt": "2021-09-22T09:19:58.260Z",
     "is_active": 1
@@ -35,7 +33,6 @@
     "address": "4/w,city",
     "profile_url": "assets/images/francis.png",
     "role_id": 2,
-    "user_borrowed_books": 1,
     "createdAt": "2021-09-22T09:19:58.260Z",
     "updatedAt": "2021-09-22T09:19:58.260Z",
     "is_active": 1

@@ -26,4 +26,8 @@ export class AuthenticationService {
     }
     return false;
   }
+
+  getRoles() {
+    return this.http.get<any>(this.baseUrl + 'roles', {});
+  }
 }

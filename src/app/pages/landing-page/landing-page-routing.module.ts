@@ -20,21 +20,28 @@ const routes: Routes = [
       {
         path: 'my-books',
         loadChildren: () => import('../books/books.module').then((m) => m.BooksModule),
+        data: {roles: ['User']},
         canActivate: [AuthGuardService],
       },
       {
         path: 'books-borrowed',
-        loadChildren: () => import('../borrow-books/borrow-books.module').then((m) => m.BorrowBooksModule),
+        loadChildren: () => import('../books-by-status/books-by-status.module').then((m) => m.BooksByStatusModule),
         canActivate: [AuthGuardService],
       },
       {
         path: 'books-available',
-        loadChildren: () => import('../borrow-books/borrow-books.module').then((m) => m.BorrowBooksModule),
+        loadChildren: () => import('../books-by-status/books-by-status.module').then((m) => m.BooksByStatusModule),
         canActivate: [AuthGuardService],
       },
       {
         path: 'books-overdue',
-        loadChildren: () => import('../borrow-books/borrow-books.module').then((m) => m.BorrowBooksModule),
+        loadChildren: () => import('../books-by-status/books-by-status.module').then((m) => m.BooksByStatusModule),
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'books-history',
+        loadChildren: () => import('../books-by-status/books-by-status.module').then((m) => m.BooksByStatusModule),
+        data: {roles: ['Librarian']},
         canActivate: [AuthGuardService],
       },
     ]

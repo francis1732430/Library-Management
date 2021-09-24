@@ -15,7 +15,7 @@
 .book-item {
     width: 40%;
     height: 40%;
-    margin-bottom: 150px;
+    margin-bottom: 220px;
 }
 .book-img {
     width: 80%;
@@ -50,28 +50,28 @@
     font-size: 14px;
 }
 
-.search {
+.search-c {
     width: 100%;
     position: relative;
     display: flex;
   }
   
-  .searchTerm {
+  .searchTerm-c {
     width: 100%;
     border: 3px solid #00B4CC;
     border-right: none;
     padding: 5px;
-    height: 20px;
+    height: 36px;
     border-radius: 5px 0 0 5px;
     outline: none;
     color: #9DBFAF;
   }
   
-  .searchTerm:focus{
+  .searchTerm-c:focus{
     color: #00B4CC;
   }
   
-  .searchButton {
+  .searchButton-c {
     width: 40px;
     height: 36px;
     border: 1px solid #00B4CC;
@@ -83,9 +83,9 @@
     font-size: 20px;
   }
   
-  .wrap{
+  .wrap-c{
     width: 30%;
-    margin-right: 190px;
+    margin-right: 135px;
   }
 
   .book-search {

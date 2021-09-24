@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BorrowBooksComponent } from './borrow-books.component';
+import { ConfirmationPopupComponent } from './confirmation-popup.component';
 
-describe('BorrowBooksComponent', () => {
-  let component: BorrowBooksComponent;
-  let fixture: ComponentFixture<BorrowBooksComponent>;
+describe('ConfirmationPopupComponent', () => {
+  let component: ConfirmationPopupComponent;
+  let fixture: ComponentFixture<ConfirmationPopupComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BorrowBooksComponent ]
+      declarations: [ ConfirmationPopupComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BorrowBooksComponent);
+    fixture = TestBed.createComponent(ConfirmationPopupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

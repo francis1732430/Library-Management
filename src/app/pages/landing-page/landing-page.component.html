@@ -20,6 +20,11 @@
                 OverDue Books
             </a>
         </div>
+        <div class="books-management p-20" *appRolesPermission="['Librarian']">
+            <a routerLink="books-history" [queryParams]="{ history: true}">
+                History
+            </a>
+        </div>
     </div>
 
     <div class="landing-page-content">

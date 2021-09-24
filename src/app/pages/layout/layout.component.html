@@ -11,7 +11,7 @@
                 </label>
             </div>
         </div>
-        <div class="my-books">
+        <div class="my-books" *appRolesPermission="['User']">
             <a routerLink="home/my-books" [queryParams]="{ id: userProfile.id}">My Books</a>
         </div>
         <div class="logout">

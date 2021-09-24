@@ -1,9 +1,9 @@
 <div class="books-pg">
     <div class="book-search">
-        <div class="wrap">
-            <div class="search">
-               <input type="text" class="searchTerm" [(ngModel)]="searchText" placeholder="Search books...">
-               <button type="submit" class="searchButton" (click)="getAllBookList()">
+        <div class="wrap-c">
+            <div class="search-c">
+               <input type="text" class="searchTerm-c" [(ngModel)]="searchText" placeholder="Search books...">
+               <button type="submit" class="searchButton-c" (click)="getAllBookList()">
                  <i class="fa fa-search"></i>
               </button>
             </div>
@@ -42,17 +42,25 @@
                 <label>
                     Borrowed Date: {{ book?.booksBorrows?.borrowed_date | date:'mediumDate'}}
                 </label>
-            </div><div class="book-info">
+            </div>
+            <div class="book-info">
                 <label>
                     Return Date: {{ book?.booksBorrows?.return_date | date:'mediumDate'}}
                 </label>
             </div>
+            <div class="book-info" *ngIf="book.booksBorrows.fee_charge && userId == book.booksBorrows.user_id">
+                <label>
+                    OverDue Fee: {{ book?.booksBorrows?.fee_charge }}
+                </label>
+            </div>
             </ng-container>
-            <ng-container *ngIf="book.book_status === 'AVAILABLE'">
-                <div class="book-available-btn">
-                    <button>Add Book</button>
-                </div>
-            </ng-container>
+            <div class="book-available-btn" *ngIf="book.book_status === 'AVAILABLE'">
+                <button *appRolesPermission="['User']" class="cursor-pointer" (click)="submit(book.id, 'Borrow')">Borrow</button>
+            </div>
+            <div class="book-available-btn" *ngIf="book.book_status != 'AVAILABLE'
+            && (book.booksBorrows && userId == book.booksBorrows.user_id)">
+                <button *appRolesPermission="['User']" class="cursor-pointer" (click)="submit(book.id, 'Return')">Return Book</button>
+            </div>
         </div>
     </div>
 </div>

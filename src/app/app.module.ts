@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Module
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule  } from './shared/shared.module';
 
 // Services
 import { AuthenticationService, NavigationService, AlertService, authInterceptorProviders } from './services/index';
@@ -29,7 +30,8 @@ import { LayoutComponent } from './pages/layout/layout.component';
       positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [
     AuthenticationService,

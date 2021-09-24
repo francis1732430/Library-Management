@@ -6,28 +6,31 @@ import { DataService, AlertService, UtilityService } from '../../services';
 import { Book, UserSession } from '../../models';
 
 @Component({
-  selector: 'app-books',
-  templateUrl: './books.component.html',
-  styleUrls: ['./books.component.scss']
+  selector: 'app-borrow-books',
+  templateUrl: './books-by-status.component.html',
+  styleUrls: ['./books-by-status.component.scss']
 })
-export class BooksComponent implements OnInit {
+export class BooksByStatusComponent implements OnInit {
 
   searchText: string = "";
   booksList: Book[] = [];
+  bookStatus: string = '';
   userId: number = 0;
-  isUrlHaveQueryParams: boolean = false;
+  isHistory: boolean = false;
 
   constructor(
     private api: DataService,
-    private route: ActivatedRoute,
     private alert: AlertService,
+    private route: ActivatedRoute,
     private utility: UtilityService,
     private modalService: NgbModal,
-  ) {
+  ) { 
     this.route.queryParams
-      .subscribe( (params) => {
-        if (params.id) {
-          this.isUrlHaveQueryParams = true;
+      .subscribe(params => {
+        if (params.bookStatus) {
+          this.bookStatus = params.bookStatus;
+        } else if (params.history) {
+          this.isHistory = true;
         }
       }
     );
@@ -38,17 +41,32 @@ export class BooksComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAllBookList();
+    if (this.isHistory) {
+      this.getAllBookHistoryList();
+    } else {
+      this.getAllBookList();
+    }
   }
 
   getAllBookList(): void {
     let url = null;
     if (this.searchText) {
-      url = this.isUrlHaveQueryParams ?
-      `book/getAllBooks?userId=${this.userId}&book_title=${this.searchText}&author=${this.searchText}&category=${this.searchText}` : `book/getAllBooks?book_title=${this.searchText}&author=${this.searchText}&category=${this.searchText}`;
+      url = `book/getAllBorrowedBooks?bookStatus=${this.bookStatus}&book_title=${this.searchText}&author=${this.searchText}&category=${this.searchText}`;
     } else {
-      url = this.isUrlHaveQueryParams ? `book/getAllBooks?userId=${this.userId}` : `book/getAllBooks`;
+      url = `book/getAllBorrowedBooks?bookStatus=${this.bookStatus}`;
     }
+    this.booksList = [];
+    this.api.getRecord(url, {}).subscribe((res: any) => {
+      this.booksList = res;
+    }, (err) => {
+      const errorMessage = err && err.error && err.error.message ? err.error.message : "";
+      this.alert.error(errorMessage);
+    });
+  }
+
+  getAllBookHistoryList(): void {
+    let url = 'book/getBookHistory';
+
     this.booksList = [];
     this.api.getRecord(url, {}).subscribe((res: any) => {
       this.booksList = res;

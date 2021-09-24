@@ -66,7 +66,7 @@ server.get('/create-token', async (req, res) => {
 server.use(jsonServer.rewriter({
     '/api/*': '/$1',
     '/users/:id': '/user/getAllUsers'
-  }))
+  }));
 
 server.use(customRoutes);
 server.use(router);

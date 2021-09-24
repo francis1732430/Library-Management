@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { distinctUntilChanged } from 'rxjs/operators';
-import { UserSession } from '../models';
+import { UserSession, Role } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,9 @@ export class UtilityService {
 
   userProfileBehaviourSubject = new BehaviorSubject<UserSession>(new UserSession());
   userProfileSubject = this.userProfileBehaviourSubject.asObservable().pipe(distinctUntilChanged());
+
+  rolesBehaviourSubject = new BehaviorSubject<Role>(new Role());
+  rolesSubject = this.rolesBehaviourSubject.asObservable().pipe(distinctUntilChanged());
 
   constructor() { }
 }

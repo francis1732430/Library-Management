@@ -7,6 +7,7 @@
         "book_status": "AVAILABLE",
         "rack_number": "1A",
         "book_url": "assets/images/absalom-absalom.jpg",
+        "return_in_days": 14,
         "createdAt": "2021-09-22T09:19:58.260Z",
         "updatedAt": "2021-09-22T09:19:58.260Z",
         "is_active": 1
@@ -19,6 +20,7 @@
         "book_status": "AVAILABLE",
         "rack_number": "2C",
         "book_url": "assets/images/after-many-year.jpg",
+        "return_in_days": 14,
         "createdAt": "2021-09-22T09:19:58.260Z",
         "updatedAt": "2021-09-22T09:19:58.260Z",
         "is_active": 1
@@ -31,6 +33,7 @@
         "book_status": "AVAILABLE",
         "rack_number": "3B",
         "book_url": "assets/images/Ah-Wilderness-FE.jpg",
+        "return_in_days": 14,
         "createdAt": "2021-09-22T09:19:58.260Z",
         "updatedAt": "2021-09-22T09:19:58.260Z",
         "is_active": 1
@@ -43,6 +46,7 @@
         "book_status": "BORROWED",
         "rack_number": "1A",
         "book_url": "assets/images/AllPassionSpent.jpg",
+        "return_in_days": 14,
         "createdAt": "2021-09-22T09:19:58.260Z",
         "updatedAt": "2021-09-22T09:19:58.260Z",
         "is_active": 1
@@ -55,6 +59,7 @@
         "book_status": "OVERDUE",
         "rack_number": "2A",
         "book_url": "assets/images/Acceptabletime.jpg",
+        "return_in_days": 14,
         "createdAt": "2021-09-22T09:19:58.260Z",
         "updatedAt": "2021-09-22T09:19:58.260Z",
         "is_active": 1

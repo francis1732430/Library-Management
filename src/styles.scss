@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~ngx-toastr/toastr";
+@import "~bootstrap/scss/bootstrap";
 
 .landing-page {
     width: 100%;
@@ -26,4 +27,8 @@
 
 .p-20 {
     padding: 20px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }

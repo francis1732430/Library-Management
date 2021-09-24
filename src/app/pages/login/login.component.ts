@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserLogin } from '././../../models';
+import { UserLogin, Role } from '././../../models';
 import { AuthenticationService,
   UsersessionService,
   AlertService,
@@ -41,14 +41,19 @@ export class LoginComponent implements OnInit {
 
       if (check) {
         const user: UserLogin = this.loginForm.value;
-        this.api.login(user.email, user.password).subscribe((res) => {
+        this.api.login(user.email, user.password).subscribe((res: any) => {
           if (res) {
             this.session.create(res.userDetails, "userprofile");
             this.session.create(res.token, "token");
             this.utility.userProfileBehaviourSubject.next(res.userDetails);
-            this.nav.goToLandingPage();
+            this.api.getRoles().subscribe((rolesRes: any) => {
+              
+              this.session.create(rolesRes, "roles");
+              this.utility.rolesBehaviourSubject.next(rolesRes);
+              this.nav.goToLandingPage();
+              this.loginForm.reset();
+            });
           }
-          this.loginForm.reset();
         }, (err) => {
           const errorMessage = err && err.error && err.error.message ? err.error.message : "";
           this.alert.error(errorMessage);
